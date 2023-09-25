@@ -1,0 +1,30 @@
+{
+  "name": "resizeimagecli",
+  "version": "0.0.1",
+  "bin": {
+    "resize-image": "dist/index.js"
+  },
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsc --watch --preserveWatchOutput",
+    "link": "npm unlink resize-image -g && npm link",
+    "lint": "eslint src",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [],
+  "author": "Vedant Ghodekar",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.6.3",
+    "commander": "^11.0.0",
+    "sharp": "^0.32.6",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3"
+  }
+}
