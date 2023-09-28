@@ -2,7 +2,11 @@
 
 import { program } from 'commander';
 
-import { resizeCommand } from './commands/resize';
+import { metaCommand } from './commands/meta';
+import { mergeCommand } from './commands/merge';
+import { singleCommand } from './commands/single';
+import { multiCommand } from './commands/multi';
 
-program.addCommand(resizeCommand);
+program.addCommand(singleCommand);
+program.addCommand(multiCommand);
 program.parse(process.argv);

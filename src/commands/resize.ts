@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import resize from '../actions/resize-image';
 
 interface optionsInterface {
-  output: string;
+  output: string | undefined;
   width: string;
   height: string;
   format: 'png' | 'jpg';
@@ -12,7 +12,7 @@ interface optionsInterface {
 export const resizeCommand = new Command()
   .command('resize')
   .argument('[inputDir|inputImg]', 'Input directory or Image')
-  .option('-o, --output <outputDir >', 'Output directory', './Resized/')
+  .option('-o, --output <outputDir >', 'Output directory')
   .option('-w, --width <width>', 'Width', '1920')
   .option('-h, --height <height>', 'Height', '1080')
   .option('-f, --format <png | jpg>', 'Format', 'png')
