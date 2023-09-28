@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import path from 'path';
 import { resizeInterface } from '../interfaces/resizeInterface';
 import {
@@ -8,7 +7,6 @@ import {
   isDir,
 } from '../utils/fileUtils';
 import { filterImages, getMetaData, processImage } from '../utils/imageUtils';
-import { promises } from 'dns';
 
 async function multiResize(args: resizeInterface) {
   const { input, output, height, width, format } = args;
